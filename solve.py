@@ -2,7 +2,7 @@ import requests,urllib3,hashlib,re
 urllib3.disable_warnings()
 
 def get_hash(n):
-    rep = requests.get(f"https://www.challengecybersec.fr/9bcb53d26eab7e9e08cc9ffae4396b48/blog/post/{n}",verify=False)  # f pour formater la chaine
+    rep = requests.get(f"https://www.challengecybersec.fr/9bcb53d26eab7e9e08cc9ffae4396b48/blog/post/{n}",verify=False)
     return re.findall('<span id="partial-proof">(.*?)<\/span>', rep.text)[0]
 
 
